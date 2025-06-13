@@ -72,7 +72,12 @@ const WeatherApp = () => {
     const [currentCity, setCurrentCity] = useState('Colombo');
 
     const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
-    const API_BASE_URL = '/v1/current.json';
+    const API_BASE_URL = process.env.NODE_ENV === 'production' 
+    ? 'https://api.weatherapi.com/v1/current.json'
+    : '/v1/current.json';
+
+    console.log("process.env.NODE_ENV", process.env.NODE_ENV);
+    
 
     const fetchWeather = async (city) => {
         setLoading(true);
