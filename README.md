@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Weather Reporter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React weather application displaying current weather information for Colombo, Sri Lanka, and other cities worldwide.
 
-## Available Scripts
+## 🌟 Features
 
-In the project directory, you can run:
+### Core Requirements
+- ✅ **Real-time Weather Data**: Fetches current weather for Colombo, Sri Lanka
+- ✅ **Essential Weather Info**: Temperature, Humidity, Wind Speed, UV Index
+- ✅ **Clean Interface**: Professional and user-friendly design
+- ✅ **Version Control**: Full Git history and proper project structure
 
-### `npm start`
+## 🚀 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[https://weather-reporter-rho.vercel.app/]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- **Frontend**: React 18.2.0
+- **Styling**: Custom CSS with CSS Grid and Flexbox
+- **API**: WeatherAPI.com
+- **Icons**: Custom SVG icons
+- **Deployment**: Vercel
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Installation & Setup
 
-### `npm run build`
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- WeatherAPI.com account (free)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/VihanPamudya/weather-reporter.git
+cd weather-reporter
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Step 2: Install Dependencies
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Step 3: Get API Key
+1. Sign up at [WeatherAPI.com](https://weatherapi.com)
+2. Get your free API key from the dashboard
+3. Add your API key to `.env`:
+```bash
+REACT_APP_WEATHER_API_KEY=your_actual_api_key_here
+```
 
-### `npm run eject`
+### Step 4: Start Development Server
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The app will open at `http://localhost:3000`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🏗️ Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+├── api/
+│   └── weather.js          
+├── node_modules/           
+├── public/                
+├── src/
+│   ├── components/
+│   │   ├── WeatherApp.js            
+│   ├── App.css
+│   ├── App.js 
+│   ├── index.css           
+│   └── index.js            
+├── logo.svg                
+├── .env                    
+├── .gitignore              
+├── package-lock.json       
+├── package.json            
+└── README.md          
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Happy Weather Tracking! 🌤️**
