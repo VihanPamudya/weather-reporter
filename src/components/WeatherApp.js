@@ -71,31 +71,25 @@ const WeatherApp = () => {
     const [searchCity, setSearchCity] = useState('');
     const [currentCity, setCurrentCity] = useState('Colombo');
 
-    const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
-    const API_BASE_URL = process.env.NODE_ENV === 'production' 
-    ? 'https://api.weatherapi.com/v1/current.json'
-    : '/v1/current.json';
-
-    console.log("process.env.NODE_ENV", process.env.NODE_ENV);
-    
+    const API_BASE_URL = '/api/weather';
 
     const fetchWeather = async (city) => {
         setLoading(true);
         setError(null);
 
         try {
-            const response = await fetch(
-                `${API_BASE_URL}?key=${API_KEY}&q=${encodeURIComponent(city)}&aqi=no`
-            );
+            const response = await fetch(`${API_BASE_URL}?city=${encodeURIComponent(city)}`);
 
             if (!response.ok) {
-                throw new Error(`Weather data not found for "${city}"`);
+                const errorData = await response.json();
+                throw new Error(errorData.error || `Weather data not found for "${city}"`);
             }
 
             const data = await response.json();
             setWeatherData(data);
             setCurrentCity(city);
         } catch (err) {
+            console.error('Fetch error:', err);
             setError(err.message);
             setWeatherData(null);
         } finally {
